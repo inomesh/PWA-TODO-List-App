@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TODO Application with flask">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Materialize css">
+    <meta name="author" content="Nomesh Sehgal">
+    <meta name="theme-color" content="#55F">
+    <meta name="background-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../static/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../static/images/android-chrome-512x512.png">
+    <link rel="manifest" href="../static/site.webmanifest">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../static/css/index.css">
+
+    <!-- custom js -->
+    <script async src="../static/js/local.js"></script>
+
+
+    <!-- service worker -->
+    <script src="../static/js/main.js"></script>
+
+
+    <!-- bootstrap -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+             
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/2ede387783.js" crossorigin="anonymous"></script>
+    
+    <!-- title -->
+    <title>{% block title %}{% endblock %}</title>
+    {% block link %}{%endblock%}
+
+
+</head>
+<body>
+
+         <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="/">
+                <img src="../static/images/android-chrome-192x192.png" width="30" height="30" alt="Logo" loading="lazy">
+            </a>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+
+    <footer>
+        
+        <span class="new-card fixed-bottom px-2 shadow" id="new-todo">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus w-100 h-100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+        </span>
+
+    </footer>
+</body>
+</html>
