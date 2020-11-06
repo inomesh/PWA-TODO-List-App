@@ -1,65 +1,64 @@
 :root {
-    --theme-font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --theme-font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* --theme-color;
+  --theme-background; */
 }
 
 body {
-    font-family: var(--theme-font-family);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.6s;
-    /* padding: 16px; */
-    overflow: hidden;
+  font-family: var(--theme-font-family);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s;
+  /* padding: 16px; */
+  /* overflow: hidden; */
 }
 
 .card-deck .card {
-    margin-bottom: 5px !important;
+  margin-bottom: 5px !important;
+  border-radius: 10px;
 }
 
 .new-card {
-    background-color: var(--indigo) !important;
-    color: var(--white) !important;
-    border-radius: 50% !important;
-    width: 70px !important;
-    height: 70px !important;
-    bottom: 5vh !important;
-    left: 75vw !important;
-    cursor: pointer;
+  background-color: var(--indigo) !important;
+  color: var(--white) !important;
+  border-radius: 50% !important;
+  width: 70px !important;
+  height: 70px !important;
+  bottom: 5vh !important;
+  left: 75vw !important;
+  cursor: pointer;
 }
 
 .new-card:hover {
-    background-color: rgba(0, 0, 0, 0.6) !important;
-    transition: all 0.01s !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  transition: all 0.01s !important;
 }
-
-
 
 /* new todo section starts */
 
 .full_todo_section {
-    width: 100vw !important;
-    height: 100vh !important;
+  width: 100vw !important;
+  height: 100vh !important;
 }
 
 form {
-    transition: all 0.6s !important;
+  transition: all 0.6s !important;
 }
 
-form > .col-12 {
-    
+input,
+textarea {
+  padding: 8px !important;
+  height: 10vh !important;
+  border: none !important;
+  outline: none !important;
+  border-color: unset !important;
+  box-shadow: unset !important;
 }
 
-input, textarea {
-    padding: 8px !important;
-    height: 10vh !important;
-    border: none !important;
-    outline: none !important;
-    border-color: unset !important;
-    box-shadow: unset !important;
-}
-
-textarea, textarea:focus {
-    height: 85vh !important;
-    resize: none !important;
+textarea,
+textarea:focus {
+  height: 85vh !important;
+  resize: none !important;
 }
