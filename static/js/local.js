@@ -1,4 +1,9 @@
 window.addEventListener("load", () => {
+  // preventing the right-click default option -> like copy, paste, reload
+  window.oncontextmenu = function (e) {
+    e.preventDefault();
+  };
+
   // initiate local storage
   if (localStorage.length === 0) {
     initiateLocalStorage();
@@ -165,10 +170,10 @@ function initiateLocalStorage() {
 
 function updateBody(title, content, time, dataId) {
   let main = document.createElement("div");
-  main.setAttribute("class", "col-12 col-md-4 col-lg-3 p-1 m-0");
+  main.setAttribute("class", "col-12 col-md-4 p-1 m-0");
 
   let card = document.createElement("div");
-  card.setAttribute("class", "card w-100 h-100");
+  card.setAttribute("class", "card w-100 h-100 shadow");
 
   let card_body = document.createElement("div");
   card_body.setAttribute("class", "card-body");
@@ -225,14 +230,16 @@ function updateFromlocalToBody() {
   let local = JSON.parse(localStorage.getItem("mytodo"));
   // local.reverse();
   let id = 0;
-  local.forEach((e) => {
-    if (
-      e.title !== undefined &&
-      e.content !== undefined &&
-      e.time !== undefined
-    ) {
-      updateBody(e.title, e.content, e.time, id);
-      id++;
-    }
-  });
+  if (local) {
+    local.forEach((e) => {
+      if (
+        e.title !== undefined &&
+        e.content !== undefined &&
+        e.time !== undefined
+      ) {
+        updateBody(e.title, e.content, e.time, id);
+        id++;
+      }
+    });
+  }
 }

@@ -18,6 +18,7 @@ body {
 .card-deck .card {
   margin-bottom: 5px !important;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .new-card {
